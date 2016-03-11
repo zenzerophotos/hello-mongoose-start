@@ -2,6 +2,7 @@ var express = require('express'),
     logger  = require('morgan')('dev'),
     path    = require('path'),
     mongoose = require('mongoose'),
+
     Schema = mongoose.Schema,
     bodyParser = require('body-parser'),
     server  = express();
@@ -17,6 +18,7 @@ var express = require('express'),
       }
     });
  var Todo = mongoose.model('Todo',todoSchema)
+
 mongoose.connect('mongodb://localhost/todoApp');
 var port = process.env.PORT || 9000;
 
